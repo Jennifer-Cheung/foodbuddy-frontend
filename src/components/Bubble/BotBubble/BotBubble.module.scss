@@ -1,0 +1,72 @@
+@use '../../../variables' as *;
+
+.bubbleWrapper {
+  display: flex;
+  flex-direction: row;
+  overflow-anchor: none;
+}
+
+.botBubble {
+  background-color: $dark-green;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 10px;
+  max-width: 336px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.description {
+  font-size: $secondary-body-size;
+  color: $dark-aqua;
+}
+
+.warningDishName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.warningIcon {
+  color: $red;
+}
+
+.goodTag {
+  background-color: $lime;
+  padding: 2px 14px;
+  border-radius: 20px;
+  font-size: $button-text-size;
+}
+
+.goodProfileTag {
+  font-weight: $button-text-weight;
+  color: $aqua;
+}
+
+.badTag {
+  background-color: $red;
+  padding: 2px 14px;
+  border-radius: 20px;
+  font-size: $button-text-size;
+}
+
+.badProfileTag {
+  font-weight: $button-text-weight;
+  color: $red;
+}

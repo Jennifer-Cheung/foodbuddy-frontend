@@ -1,0 +1,18 @@
+@use '../../../../variables' as *;
+
+.sendButton {
+  background-color: $green;
+  width: 44px;
+  height: 44px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendIcon {
+  width: 20px;
+  height: 28px;
+  translate: 2px;
+}

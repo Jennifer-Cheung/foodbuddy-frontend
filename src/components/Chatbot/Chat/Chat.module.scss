@@ -1,0 +1,27 @@
+.chatWrapper {
+  flex: 1;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  overflow: scroll;
+  overflow-anchor: none;
+  height: 100%;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  overflow-anchor: none;
+  height: 100%;
+}
+
+.anchor {
+  overflow-anchor: auto;
+  height: 0;
+}

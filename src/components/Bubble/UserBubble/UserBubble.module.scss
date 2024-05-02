@@ -1,0 +1,16 @@
+@use '../../../variables' as *;
+
+.bubbleWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
+  overflow-anchor: none;
+}
+
+.userBubble {
+  padding: 10px 20px;
+  background-color: $light-green;
+  border-radius: 10px 0 10px 10px;
+  max-width: 280px;
+  overflow-wrap: break-word;
+}
