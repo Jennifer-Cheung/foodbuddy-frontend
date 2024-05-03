@@ -1,0 +1,27 @@
+@use '../../variables' as *;
+
+.cameraWrapper {
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cancelIcon {
+  color: $dark-green;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: $white;
+}
+
+video {
+  margin-left: -460px;
+}
+
+.shutterButton {
+  position: absolute;
+}
