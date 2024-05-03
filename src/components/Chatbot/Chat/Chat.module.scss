@@ -1,3 +1,5 @@
+@use '../../../variables' as *;
+
 .chatWrapper {
   flex: 1;
   max-height: 100%;
@@ -24,4 +26,9 @@
 .anchor {
   overflow-anchor: auto;
   height: 0;
+}
+
+.margin {
+  height: 10px;
+  background-color: $white;
 }

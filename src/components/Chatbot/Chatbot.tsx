@@ -4,29 +4,20 @@ import Chat from "./Chat/Chat";
 import InputBar from "./InputBar/InputBar";
 import { dishesList, textMessage } from "../../types";
 
-const Chatbot = () => {
-    const [inputValue, setInputValue] = useState<string>('')
-    const [messages, setMessages] = useState<(textMessage | dishesList)[]>([])
+interface ChatbotProps {
+    cameraButtonOnClick: (e: React.MouseEvent<SVGElement>) => void,
+    messages: (textMessage | dishesList)[],
+    onSendClick: () => void,
+    inputValue: string,
+    onInputChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void,
+}
 
-    const onInputChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setInputValue(e.target.value)
-    }, [])
-
-    const onClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
-        const newMessage: textMessage = {
-            source: 'user',
-            content: inputValue
-        }
-
-        // TODO: Fetch data from API endpoint to get new bot message
-        setMessages([newMessage, ...messages])
-        setInputValue('')
-    }, [inputValue, messages])
-
+const Chatbot: React.FC<ChatbotProps> = ({ cameraButtonOnClick, messages, onSendClick, inputValue, onInputChange }) => {
     return (
         <div className={styles.chatbotWrapper}>
             <Chat messages={messages} />
-            <InputBar inputValue={inputValue} onInputChange={onInputChange} onClick={onClick} />
+            <InputBar inputValue={inputValue} onInputChange={onInputChange} onClick={onSendClick}
+                      cameraButtonOnClick={cameraButtonOnClick} />
         </div>
     )
 }

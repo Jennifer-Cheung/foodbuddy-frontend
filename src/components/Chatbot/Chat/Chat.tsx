@@ -13,17 +13,18 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
         <div className={styles.chatWrapper}>
             <div className={styles.chat}>
                 <div className={styles.messages}>
-                    {messages.map(message => {
+                    {messages.map((message, index) => {
                         if (isTextMessage(message)) {
                             if (message.source === 'user') {
-                                return <UserBubble content={message.content} />
+                                return <UserBubble content={message.content} key={index} />
                             } else {
-                                return <BotBubble content={message.content} />
+                                return <BotBubble content={message.content} key={index} />
                             }
                         } else {
-                            return <BotBubble dishesList={message} />
+                            return <BotBubble dishesList={message} key={index} />
                         }
                     })}
+                    <div className={styles.margin}></div>
                 </div>
                 <div className={styles.anchor}></div>
             </div>

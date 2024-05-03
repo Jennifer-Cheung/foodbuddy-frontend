@@ -1,0 +1,11 @@
+@use '../../../variables' as *;
+
+.button {
+  bottom: 50px;
+  background-color: $white;
+  left: 46%;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: $black solid 6px;
+}
