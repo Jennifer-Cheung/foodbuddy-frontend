@@ -26,7 +26,7 @@ function App() {
 
             const data = new FormData()
             data.append('base64', image.substring(23))
-            const response = await fetch('http://localhost:5000/api/recommend?prompt="What can I eat?"', {
+            const response = await fetch('http://localhost:5000/api/recommend?prompt="What can I eat from this menu?"', {
                 body: data,
                 method: 'POST',
             })
